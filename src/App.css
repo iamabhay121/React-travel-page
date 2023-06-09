@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@1,200;1,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* `:root` is a CSS pseudo-class that selects the root element of the document, which is typically the
+`<html>` element. The purpose of defining variables within `:root` is to create global CSS variables
+that can be used throughout the document. In this case, the variables are defining various colors
+that can be used in the document, such as `--PrimaryColor`, `--SecondaryColor`, `--gradientColor`,
+etc. These variables can then be referenced in other CSS rules using the `var()` function, allowing
+for easy and consistent styling throughout the document. */
+:root{
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239. 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html{
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+.section{
+  padding: 4rem 0 2rem;
+}
+
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.grid{
+  display: grid;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn{
+  padding: .6rem 1.5rem;
+  background: var(--gradientColor);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn a{
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+
+.btn:hover{
+  background: var(--SecondaryColor);
+}
+
+img, video {
+   width: 100%;
+   height: auto;
+}
+
+input{
+  font-size: 100%;
+}
+
+body{
+  background: var(--bodyColor);
+}
+
+
+@media screen and (min-width: 1240px) {
+
+  .container{
+    width: 80% !important;
+    margin: auto !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section{
+    padding: 6rem 0 4rem;
+  }
+}
+
+@media screen and (min-width: 2560px){
+  body{
+    zoom: 1.7;
   }
 }
